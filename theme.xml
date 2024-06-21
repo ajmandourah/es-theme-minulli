@@ -14,69 +14,267 @@ https://github.com/anthonycaccese/minui-menu-es-de
    ///
    -->
    <view name="system">
-
       <textlist name="textlist">
          <!-- <selectorHorizontalOffset>0.3</selectorHorizontalOffset> -->
          <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
-         <fontSize>0.05</fontSize>
+         <fontSize>0.055</fontSize>
          <alignment>left</alignment>
          <lineSpacing>1</lineSpacing>
          <selectorHeight>0.07</selectorHeight>
-         <selectorColor>fdfcff</selectorColor>
-         <selectedColor>090017</selectedColor>
-         <primaryColor>fdfcff</primaryColor>
-         <secondaryColor>fdfcff</secondaryColor>
+         <selectorColor>11111b</selectorColor>
+         <selectedColor>a6e3a1</selectedColor>
+         <primaryColor>585b70</primaryColor>
+         <secondaryColor>585b70</secondaryColor>
+         <!-- <selectorColorEnd>00000000</selectorColorEnd> -->
          <zIndex>1</zIndex>
-         <pos>0 0.07</pos>
+         <pos>0 0.15</pos>
          <origin>0 0</origin>
          <horizontalMargin>0.05</horizontalMargin>
-         <!-- <selectorColorEnd>000000</selectorColorEnd>
-         <selectorGradientType>horizontal</selectorGradientType> -->
+         <selectorGradientType>horizontal</selectorGradientType>
          <forceUppercase>true</forceUppercase>
-         <size>1 0.81</size>
+         <size>1 0.7</size>
+         <text>${system.fullName}</text>
       </textlist>
+      <text name="systemName" extra="true">
+         <text>{system:fullName} ({system:total} Games)</text>
+         <color>cdd6f4</color>
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.05</fontSize>
+         <pos>0.5 0.9</pos>
+         <origin>0.5 0.5</origin>
+      </text>
+      <text name="os" extra="true">
+         <text>Minulli</text>
+         <color>bac2de</color>
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.06</fontSize>
+         <pos>0.5 0.02</pos>
+         <origin>0.5 0</origin>
+      </text>
       <text name="systemInfo">
-         <systemInfoDelay>300</systemInfoDelay>
-         <pos>0.8 0.8</pos>
+         <systemInfoDelay>0</systemInfoDelay>
+         <pos>0 0</pos>
+         <origin>1 1</origin>
          <size>0 0</size>
-         <color>fdfcff</color>
+         <color>cdd6f4</color>
          <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
          <fontSize>0.041666666666667</fontSize>
-
       </text>
+      
       <helpsystem name="help">
          <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
-         <fontSize>0.041666666666667</fontSize>
-         <textColor>fdfcff</textColor>
-         <iconColor>fdfcff</iconColor>
+         <fontSize>0.05</fontSize>
+         <textColor>00000000</textColor>
+         <iconColor>00000000</iconColor>
 
       </helpsystem>
+      <storyboard>
+         <animation property="opacity" from="1" to="0" mode="EaseInCubic"/>
+      </storyboard>
+
    </view>
 
-   <!-- <view name="gamelist">
-      <textlist name="gamelist">
-         <fontPath>./_inc/fonts/Mainport.otf</fontPath>
-         <fontSize>0.041666666666667</fontSize>
-         <lineSpacing>2.0115</lineSpacing>
-         <selectorColor>00000000</selectorColor>
-         <selectedBackgroundColor>fdfcff</selectedBackgroundColor>
-         <selectedColor>090017</selectedColor>
-         <primaryColor>fdfcff</primaryColor>
-         <secondaryColor>fdfcff</secondaryColor>
-         <zIndex>1</zIndex>
-         <pos>0.071875 0.075</pos>
+   <view name="screen">
+      <text name="clock">
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.06</fontSize>
+         <pos>0.03 0.02</pos>
          <origin>0 0</origin>
-         <size>0.85625 0.733333333333333</size>
+         <size>0 0</size>
+         <color>bac2de</color>
+      </text>
+      <controllerActivity name="controllerActivity">
+         <color>000000</color>
+
+      </controllerActivity>
+   </view>
+   <view name="menu">
+      <menuBackground name="menubg">
+         <color>181825</color>
+
+      </menuBackground>
+      <menuSwitch name="menuswitch">
+
+      </menuSwitch>
+      <menuSlider name="menuslider" >
+
+      </menuSlider>
+      <menuButton name="menubutton" >
+
+      </menuButton>
+      <menuText name="menutext" >
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.055</fontSize>
+         <color>bac2de</color>
+         <separatorColor>00000000</separatorColor>
+         <selectedColor>a6e3a1</selectedColor>
+         <selectorColor>11111b</selectorColor>
+
+      </menuText>
+      <menuText name="menutitle" >
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.05</fontSize>
+         <color>bac2de</color>
+         
+      </menuText>
+      <menuText name="menufooter" >
+
+      </menuText>
+      <menuTextSmall name="menutextsmall" >
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.04</fontSize>
+         <color>585b70</color>
+         <selectedColor>a6e3a1</selectedColor>
+         <selectorColor>11111b</selectorColor>
+      </menuTextSmall>
+      <storyboard>
+         <animation property="opacity" from="0" to="0" mode="EaseInCubic"/>
+      </storyboard>
+   </view>
+
+   <view name="system, basic,detailed">
+      <image name="background_" extra="true">
+         <path>./_inc/bg.png</path>
+         <tile>true</tile>
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>-3</zIndex>
+      </image>
+
+   </view>
+
+   <view name="basic, detailed">
+
+      <text name="logoText" >
+         <color>bac2de</color>
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.06</fontSize>
+         <pos>0.5 0.025</pos>
+         <origin>0.5 0</origin>
+      </text>
+      <textlist name="gamelist">
+
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.055</fontSize>
+         <alignment>left</alignment>
+         <lineSpacing>1</lineSpacing>
+         <selectorHeight>0.07</selectorHeight>
+         <selectorColor>11111b</selectorColor>
+         <selectedColor>a6e3a1</selectedColor>
+         <primaryColor>585b70</primaryColor>
+         <secondaryColor>585b70</secondaryColor>
+         <selectorColorEnd>00000000</selectorColorEnd>
+         <selectorGradientType>horizontal</selectorGradientType>
+         <zIndex>1</zIndex>
+         <pos>0 0.15</pos>
+         <origin>0 0</origin>
+         <horizontalMargin>0.05</horizontalMargin>
+         <size>0.5 0.7</size>
       </textlist>
+      <image name="md_image">
+         <pos>0.6 0.15</pos>
+         <origin>0 0</origin>
+         <maxSize>0.35 0.5</maxSize>
+      </image>
+      <rating name="md_rating">
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>000000</color>
+      </rating>
+      <text name="md_lbl_rating" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_releasedate" >
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_developer" >
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_publisher" >
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_genre" >
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_players" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_lastplayed" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_playcount" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_lbl_gametime" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_developer" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_publisher" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_genre" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_players" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <datetime name="md_lastplayed" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </datetime>
+      <datetime name="md_releasedate" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </datetime>
+      <text name="md_playcount" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_description" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
+      <text name="md_name" >
+         <pos>0 0</pos>
+         <origin>1 1</origin>
+         <color>00000000</color>
+      </text>
       <helpsystem name="help">
-         <pos>0.023125 0.904166666666667</pos>
-         <fontPath>./_inc/fonts/Mainport.otf</fontPath>
-         <fontSize>0.025333333333333</fontSize>
-         <textColor>fdfcff</textColor>
-         <iconColor>fdfcff</iconColor>
+         <pos>0.03 0.956</pos>
+         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+         <fontSize>0.05</fontSize>
+         <textColor>a6adc8</textColor>
+         <iconColor>a6adc8</iconColor>
+         <size>1 1</size>
 
       </helpsystem>
-   </view> -->
+
+   </view>
 
    <!--
    ///
