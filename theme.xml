@@ -15,25 +15,39 @@ https://github.com/anthonycaccese/minui-menu-es-de
    -->
    <view name="system">
       <textlist name="textlist">
-         <!-- <selectorHorizontalOffset>0.3</selectorHorizontalOffset> -->
-         <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
-         <fontSize>0.055</fontSize>
-         <alignment>left</alignment>
-         <lineSpacing>1</lineSpacing>
-         <selectorHeight>0.07</selectorHeight>
-         <selectorColor>11111b</selectorColor>
-         <selectedColor>a6e3a1</selectedColor>
-         <primaryColor>585b70</primaryColor>
-         <secondaryColor>585b70</secondaryColor>
-         <!-- <selectorColorEnd>00000000</selectorColorEnd> -->
-         <zIndex>1</zIndex>
-         <pos>0 0.15</pos>
          <origin>0 0</origin>
-         <horizontalMargin>0.05</horizontalMargin>
-         <selectorGradientType>horizontal</selectorGradientType>
-         <forceUppercase>true</forceUppercase>
+         <pos>0 0.15</pos>
          <size>1 0.7</size>
-         <text>${system.fullName}</text>
+         <lines>9</lines>
+         <zIndex>1</zIndex>
+         <itemTemplate>
+            <image name="textlist-selection-background">
+               <path>./_inc/images/space.png</path>
+               <color>transparent</color>
+               <storyboard event="activate">
+                  <animation property="color" to="11111b"/>
+               </storyboard>
+               <storyboard event="deactivate">
+                  <animation property="color" to="transparent"/>
+               </storyboard>
+               <container>
+                  <padding>32 0</padding>
+                  <text name="textlist-system-name">
+                     <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
+                     <fontSize>0.055</fontSize>
+                     <text>{system:fullName}</text>
+                     <multiLine>false</multiLine>
+                     <color>585b70</color>
+                     <storyboard event="activate">
+                        <animation property="color" to="a6e3a1"/>
+                     </storyboard>
+                     <storyboard event="deactivate">
+                        <animation property="color" to="585b70"/>
+                     </storyboard>
+                  </text>
+               </container>
+            </image>
+         </itemTemplate>
       </textlist>
       <text name="systemName" extra="true">
          <text>{system:fullName} ({system:total} Games)</text>
