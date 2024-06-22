@@ -1,12 +1,12 @@
 <!--
-theme name:       MiniUI Menu
-originally by:    Shaun Inman (http://shauninman.com/)
-ported from:      https://github.com/shauninman/MinUI
-ported by:        Anthony Caccese
+theme name:       Minulli Menu
+originally by:    ajmandourah
+ported from:      
+ported by:        
 license:          creative commons CC-BY-NC-SA
-https://github.com/anthonycaccese/minui-menu-es-de
+https://github.com/ajmandourah/es-theme-minulli
 -->
-<theme>
+<theme defaultTransition="instant">
    <formatVersion>7</formatVersion>
    <!--
    ///
@@ -18,7 +18,7 @@ https://github.com/anthonycaccese/minui-menu-es-de
          <origin>0 0</origin>
          <pos>0 0.15</pos>
          <size>1 0.7</size>
-         <lines>9</lines>
+         <lines>11</lines>
          <zIndex>1</zIndex>
          <itemTemplate>
             <image name="textlist-selection-background">
@@ -119,7 +119,7 @@ https://github.com/anthonycaccese/minui-menu-es-de
       <menuText name="menutext" >
          <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
          <fontSize>0.055</fontSize>
-         <color>bac2de</color>
+         <color>585b70</color>
          <separatorColor>00000000</separatorColor>
          <selectedColor>a6e3a1</selectedColor>
          <selectorColor>11111b</selectorColor>
@@ -168,7 +168,7 @@ https://github.com/anthonycaccese/minui-menu-es-de
          <origin>0.5 0</origin>
       </text>
       <textlist name="gamelist">
-
+         <lines>11</lines>
          <fontPath>./_inc/fonts/EXEPixelPerfect.ttf</fontPath>
          <fontSize>0.055</fontSize>
          <alignment>left</alignment>
